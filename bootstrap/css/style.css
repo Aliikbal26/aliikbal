@@ -16,7 +16,14 @@ h2{
     font-family: 'Poppins', sans-serif;
 }
 
-#project{
+h5{
+    font-family: 'Poppins', sans-serif;
+    color: red;
+    box-shadow: cornsilk;
+    font-weight: bold;
+}
+
+#project, #testimoni{
     background-color:  #297cf8;
 
 }
