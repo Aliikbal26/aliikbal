@@ -21,16 +21,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-              <a class="nav-link" href="#about">About</a>
-              <a class="nav-link" href="#project">Project</a>
-              <a class="nav-link" href="#learning">Learning</a>
-              <a class="nav-link" href="#contact">Contact</a>
+            <div class="navbar-nav ms-auto ">
+              <a class="nav-link text-white" aria-current="page" href="#home">Home</a>
+              <a class="nav-link text-white" href="#about">About</a>
+              <a class="nav-link text-white" href="#project">Project</a>
+              <a class="nav-link text-white" href="#learning">Learning</a>
+              <a class="nav-link text-white" href="#contact">Contact</a>
 
             </div>
           </div>
         </div>
+
       </nav>
 
     <!-- Content -->
@@ -54,6 +55,9 @@
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,160L34.3,176C68.6,192,137,224,206,224C274.3,224,343,192,411,181.3C480,171,549,181,617,202.7C685.7,224,754,256,823,240C891.4,224,960,160,1029,154.7C1097.1,149,1166,203,1234,213.3C1302.9,224,1371,192,1406,176L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>    
+    
+    
+    
     </section>
 
     <!-- About -->
@@ -140,7 +144,7 @@
                         <div class="card-body">
                           <h5 class="card-title">PHP Dasar</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">See Details</a>
+                          <a href="learning.html" class="btn btn-primary">See Details</a>
                         </div>
                       </div>
                 </div>
@@ -207,24 +211,35 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-3">
-                    <form>
+
+                    <!-- alert -->
+                    <div class="alert alert-form alert-primary alert-dismissible fade show d-none" role="alert">
+                        <strong>Success!</strong> Pesan anda sudah terkirim.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+
+                    <form name="submit contact">
                         <div class="mb-3">
                           <label for="name" class="form-label">Nama Lengkap</label>
-                          <input type="text" class="form-control" id="name" aria-describedby="name">
+                          <input type="text" name="nama" class="form-control" id="name" aria-describedby="name">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <input type="email" name="email" class="form-control" id="email" aria-describedby="email">
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Nomor Whatsapp</label>
-                            <input type="text" class="form-control" id="phone" aria-describedby="phone">
+                            <input type="text" name="wa" class="form-control" id="phone" aria-describedby="phone">
                           </div>
                         <div class="mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
-                            <textarea name="" class="form-control" id="" cols="30" rows="3"></textarea>                       
+                            <textarea name="alamat" class="form-control" id="" cols="30" rows="3"></textarea>                       
                          </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                          </button>
                     </form>
                 </div>
             </div>
@@ -238,5 +253,33 @@
 
 
 <script src="bootstrap/js/bootstrap.js"></script>
+
+<!-- contact -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwRk2-xYcd9LOu0W5RqGhJEpdGVDGRZUrfYEeiQJ40AYeMT_YOl1cTax3-DE1woFJQLng/exec'
+    const form = document.forms['submit contact']
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoadaing = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.alert-form');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+
+      //tampilkan tombol loading
+      btnLoadaing.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+        btnLoadaing.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        //menampilkan alert
+        myAlert.classList.toggle('d-none');
+        //reset form
+        form.reset();
+        console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
