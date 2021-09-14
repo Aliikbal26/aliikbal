@@ -254,6 +254,12 @@
 
 <script src="bootstrap/js/bootstrap.js"></script>
 
+<!-- gsp -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script>
+gsap.from(".jumbotron img", {duration: 1.5, y: -100, ease:'bounce'});
+</script>
+
 <!-- contact -->
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwRk2-xYcd9LOu0W5RqGhJEpdGVDGRZUrfYEeiQJ40AYeMT_YOl1cTax3-DE1woFJQLng/exec'
@@ -261,7 +267,7 @@
     const btnKirim = document.querySelector('.btn-kirim');
     const btnLoadaing = document.querySelector('.btn-loading');
     const myAlert = document.querySelector('.alert-form');
-  
+
     form.addEventListener('submit', e => {
       e.preventDefault()
 
