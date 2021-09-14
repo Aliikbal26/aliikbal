@@ -32,6 +32,28 @@ section{
     padding-top: 5rem;
 }
 
+.container-satu{
+    /* width: 700px; */
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+.kolom1{
+    flex: 4;
+    order: 2;
+    background-color: lightsteelblue;
+    padding: 20px;
+}
+.sidebar{
+    flex: 1;
+    order: 1;
+    background-color: lightsteelblue;
+    padding: 20px;
+}
+
 
 @media (min-width: 992px){    
     .nav-link:hover::after{
