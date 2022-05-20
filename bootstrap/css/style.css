@@ -16,18 +16,17 @@ h2{
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* button login */
 .login{
     font-family: 'Poppins', sans-serif;
 }
+
 h5{
     font-family: 'Poppins', sans-serif;
     color: red;
     box-shadow: cornsilk;
     font-weight: bold;
-}
-label{
-    font-family: 'Poppins', sans-serif;
 }
 
 #project, #testimoni{
