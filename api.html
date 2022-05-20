@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var result = {
+            "code": "200",
+            "messages": "Successfully received data",
+            "value": [
+
+                {
+                    "id": "367203",
+                    "id_kabupaten": "3672",
+                    "name": "Pulomerak"
+                },
+                {
+                    "id": "367204",
+                    "id_kabupaten": "3672",
+                    "name": "Ciwandan"
+                },
+                {
+                    "id": "367205",
+                    "id_kabupaten": "3672",
+                    "name": "Jombang"
+                },
+                {
+                    "id": "367206",
+                    "id_kabupaten": "3672",
+                    "name": "Gerogol"
+                },
+                {
+                    "id": "367207",
+                    "id_kabupaten": "3672",
+                    "name": "Purwakarta"
+                },
+                {
+                    "id": "367208",
+                    "id_kabupaten": "3672",
+                    "name": "Citangkil"
+                }
+            ]
+        }
+
+
+        var history = (result.value[1]);
+        console.log(history);
+
+        //document.write(`${result[value]}<br>`);
+
+    </script>
+
+    <table>
+        <td>
+            <script>
+                document.write([result.value['1']]);
+            </script>
+        </td>
+    </table>
+
+
+</body>
+
+</html>
