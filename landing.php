@@ -310,7 +310,7 @@ if (!isset($_SESSION["login"])) {
             </div>
             <div class="mb-3">
               <label for="alamat" class="form-label">Alamat</label>
-              <textarea name="alamat" class="form-control" id="" cols="30" rows="3"></textarea>
+              <textarea name="alamat" class="form-control" id="alamat" cols="30" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-kirim">
               Submit
