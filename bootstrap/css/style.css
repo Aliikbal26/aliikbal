@@ -60,6 +60,19 @@ section{
     padding: 20px;
 }
 
+.card:hover{
+    width:100%;
+    transform: scale(1.2);
+    shadow:2px;
+    overflow: hidden;
+    transition: all 1s ease;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    z-index: 2;
+
+}
+
 
 @media (min-width: 992px){    
     .nav-link:hover::after{
@@ -120,12 +133,6 @@ section{
             transition: 0.3s;
         }
 
-        /* .scrol{
-            position: absolute;
-            top: 0;
-            right: 20px;
-            font-size: 20px;
-        } */
 
         @media screen and (max-height: 450px) {
             .sidenav {
