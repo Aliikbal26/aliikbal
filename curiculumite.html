@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <img src="img/ali.jpg" width="170" class="rounded-circle img-thumbnail" alt="">
+                <h2 class="mt-2">Contact</h2>
+
+                <h6 id="wh">Whatsapp</h6>
+                08815101286
+                <h6>Email</h6>
+                aliikbal260401@gmail.com
+                <h6>Github</h6>
+                aliikbal26
+                <h6>instagram</h6>
+                @aliikbal_26
+                <h2 class="mt-2">Address</h2>
+                <h6>Desa Karangmalang, Karangsembung, Kab. Cirebon 45186</h6>
+            </div>
+            <div class="col-md-8">
+                <h2>Ali Ikbal</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, culpa id impedit laudantium
+                    officiis sapiente provident, quisquam error perspiciatis ab doloremque rem. Voluptas maxime placeat
+                    atque, nam a sequi dolor, similique nobis perferendis expedita porro. Similique officia provident
+                    laborum ratione, temporibus rerum animi vitae ab, a corporis iusto, explicabo recusandae.</p>
+                <h4>Sertifikat</h4>
+                <ul>
+                    <li>
+                        <h5>Web Developer</h5>
+                    </li>
+                    <li>
+                        <h5>Mikrotik</h5>
+                    </li>
+                    <li>
+                        <h5>CCNA</h5>
+                    </li>
+                    <li>
+                        <h5>Data Science</h5>
+                    </li>
+                    <li>
+                        <h5>Artificial Intelegence</h5>
+                    </li>
+
+                </ul>
+
+
+                <h4>Skills</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>PHP</h6>
+                        <input type="range" min="1" max="100" value="50" id="myRange">
+                        <p id="demo" name="ohasil">skills%</p>
+                        <h6>HTML</h6>
+                        <input type="range" min="1" max="100" value="50" id="myRange1">
+                        <p id="demo1" name="ohasil">%</p>
+                        <h6>CSS</h6>
+                        <input type="range" min="1" max="100" value="50" id="myRange2">
+                        <p id="demo2" name="ohasil">%</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Javascript</h6>
+                        <input type="range" min="1" max="100" value="50" id="myRange3">
+                        <p id="demo3">%</p>
+                        <h6>Python</h6>
+                        <input type="range" min="1" max="100" value="50" id="myRange4">
+                        <p id="demo4">%</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        output.innerHTML = slider.value;
+
+        var slider = document.getElementById("myRange1");
+        var output = document.getElementById("demo1");
+        output.innerHTML = slider.value;
+        output.innerHTML = slider.value;
+
+
+        var slider = document.getElementById("myRange2");
+        var output = document.getElementById("demo2");
+        output.innerHTML = slider.value;
+        output.innerHTML = slider.value;
+
+        var slider = document.getElementById("myRange3");
+        var output = document.getElementById("demo3");
+        output.innerHTML = slider.value;
+        output.innerHTML = slider.value;
+
+        var slider = document.getElementById("myRange4");
+        var output = document.getElementById("demo4");
+        output.innerHTML = slider.value;
+        output.innerHTML = slider.value;
+
+        slider.oninput = function skills() {
+            output.innerHTML = this.value;
+        }
+
+        slider.oninput = function skills() {
+            output.innerHTML = this.value;
+        }
+        slider.oninput = function skills() {
+            output.innerHTML = this.value;
+        }
+        slider.oninput = function skills() {
+            output.innerHTML = this.value;
+        }
+
+        console.log(skills);
+
+        // document.skills.value = output;
+    </script>
+</body>
+
+</html>
